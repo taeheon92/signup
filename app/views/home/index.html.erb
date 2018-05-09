@@ -1,0 +1,11 @@
+<h1>welcome!</h1>
+<% if current_user.nil? == true %>
+    <a href="/users/sign_in">로그인</a>
+    <p>둠칫둠칫쓰 씬나는 로긘타임</p></br>
+    <iframe src="https://giphy.com/embed/XIqCQx02E1U9W" width="480" height="269" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/XIqCQx02E1U9W">via GIPHY</a></p>
+    <% elsif current_user.nil? == false %>
+    <%= current_user.nickname %>
+    <a data-method="DELETE" href="/users/sign_out">로그아웃</a>
+    <p>우와 로그인했따!!!!!!</p></br>
+    <iframe src="https://giphy.com/embed/26uf6o80xhd6MKGIw" width="480" height="264" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/will-smith-1live-applaus-26uf6o80xhd6MKGIw">via GIPHY</a>
+<% end %>
